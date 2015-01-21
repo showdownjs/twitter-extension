@@ -1,7 +1,7 @@
 Showdown's Twitter Extension
 ==========================
 
-[![Build Status](https://travis-ci.org/showdownjs/twitter-extension.svg)](https://travis-ci.org/tivie/php-os-detector) [![npm version](https://badge.fury.io/js/showdown-twitter.svg)](http://badge.fury.io/js/showdown)
+[![Build Status](https://travis-ci.org/showdownjs/twitter-extension.svg)](https://travis-ci.org/showdownjs/twitter-extension.svg) [![npm version](https://badge.fury.io/js/showdown-twitter.svg)](http://badge.fury.io/js/showdown-twitter)
 
 ------
 
