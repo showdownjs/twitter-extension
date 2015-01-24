@@ -1,7 +1,7 @@
 Showdown's Twitter Extension
 ==========================
 
-[![Build Status](https://travis-ci.org/showdownjs/twitter-extension.svg)](https://travis-ci.org/showdownjs/twitter-extension.svg) [![npm version](https://badge.fury.io/js/showdown-twitter.svg)](http://badge.fury.io/js/showdown-twitter) [![npm version](https://badge.fury.io/bo/showdown-twitter.svg)](http://badge.fury.io/bo/showdown-twitter) 
+[![Build Status](https://travis-ci.org/showdownjs/twitter-extension)](https://travis-ci.org/showdownjs/twitter-extension.svg) [![npm version](https://badge.fury.io/js/showdown-twitter.svg)](http://badge.fury.io/js/showdown-twitter) [![npm version](https://badge.fury.io/bo/showdown-twitter.svg)](http://badge.fury.io/bo/showdown-twitter) 
 
 ------
 
