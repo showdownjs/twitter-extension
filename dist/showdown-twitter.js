@@ -1,22 +1,14 @@
-/*! showdown-twitter 21-01-2015 */
-//
-//  Twitter Extension
-//  @username   ->  <a href="http://twitter.com/username">@username</a>
-//  #hashtag    ->  <a href="http://twitter.com/search/%23hashtag">#hashtag</a>
-//
+/*! showdown-twitter 04-06-2015 */
 
 (function () {
   'use strict';
 
   var twitter = function () {
     return [
-
-      // @username syntax
       {
         type:    'lang',
         regex:   '\\B(\\\\)?@([\\S]+)\\b',
         replace: function (match, leadingSlash, username) {
-          // Check if we matched the leading \ and return nothing changed if so
           if (leadingSlash === '\\') {
             return match;
           } else {
@@ -24,13 +16,10 @@
           }
         }
       },
-
-      // #hashtag syntax
       {
         type:    'lang',
         regex:   '\\B(\\\\)?#([\\S]+)\\b',
         replace: function (match, leadingSlash, tag) {
-          // Check if we matched the leading \ and return nothing changed if so
           if (leadingSlash === '\\') {
             return match;
           } else {
@@ -38,8 +27,6 @@
           }
         }
       },
-
-      // Escaped @'s
       {
         type:    'lang',
         regex:   '\\\\@',
@@ -47,12 +34,9 @@
       }
     ];
   };
-
-  // Client-side export
   if (typeof window !== 'undefined' && window.Showdown && window.Showdown.extensions) {
     window.Showdown.extensions.twitter = twitter;
   }
-  // Server-side export
   if (typeof module !== 'undefined') {
     module.exports = twitter;
   }

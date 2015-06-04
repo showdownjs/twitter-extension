@@ -34,12 +34,12 @@ You can also [download the latest release zip or tarball](https://github.com/sho
 
 After including the extension in your application, you just need to enable it in showdown.
 
-    var converter = new Showdown.converter({extensions: ['twitter']});
+    var converter = new showdown.Converter({extensions: ['twitter']});
 
 ## Example
 
 ```javascript
-var converter = new Showdown.converter({extensions: ['twitter']}),
+var converter = new showdown.Converter({extensions: ['twitter']}),
     input = 'This is a tweet from @showdownjs with the hashtag #showdownRules',
     html = converter.makeHtml(input);
     console.log(html);
@@ -53,4 +53,3 @@ This should output:
 
 ## License
 These files are distributed under BSD license. For more information, please check the [LICENSE file](https://github.com/showdownjs/twitter-extension/blob/master/LICENSE) in the source code.
-
