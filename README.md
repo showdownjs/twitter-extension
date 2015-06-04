@@ -53,4 +53,3 @@ This should output:
 
 ## License
 These files are distributed under BSD license. For more information, please check the [LICENSE file](https://github.com/showdownjs/twitter-extension/blob/master/LICENSE) in the source code.
-
