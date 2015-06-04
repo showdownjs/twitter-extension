@@ -2,9 +2,9 @@
   "name": "showdown-twitter",
   "description": "Twitter extension for showdown",
   "homepage": "https://github.com/showdownjs/twitter-extension",
-  "license": "BSD",
+  "license": "BSD-2-Clause",
   "authors": [
-    "Estevão Santos (https://github.com/tivie)",
+    "Estevão Soares dos Santos (https://github.com/tivie)",
     "Pascal Deschênes (https://github.com/pdeschen)",
     "Corey Innis (https://github.com/coreyti)",
     "John Fraser"
@@ -21,6 +21,9 @@
     "web": "https://github.com/showdownjs/twitter-extension"
   },
   "main": ["dist/showdown-twitter.js"],
+  "dependencies": {
+    "showdown": "1.0.x"
+  },
   "ignore": [
     "src/",
     "test/",
