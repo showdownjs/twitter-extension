@@ -1,3 +1,12 @@
+<a name"1.0.1"></a>
+### 1.0.1 (2015-06-06)
+
+
+#### Bug Fixes
+
+* fix showdown name in the global scope ([3a0030a9](https://github.com/showdownjs/twitter-extension/commit/3a0030a9), closes [#3](https://github.com/showdownjs/twitter-extension/issues/3))
+
+
 <a name"1.0.0"></a>
 ## 1.0.0 (2015-06-04)
 
