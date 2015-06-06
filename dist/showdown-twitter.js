@@ -1,4 +1,4 @@
-/*! showdown-twitter 04-06-2015 */
+/*! showdown-twitter 06-06-2015 */
 
 (function () {
   'use strict';
@@ -34,8 +34,8 @@
       }
     ];
   };
-  if (typeof window !== 'undefined' && window.Showdown && window.Showdown.extensions) {
-    window.Showdown.extensions.twitter = twitter;
+  if (typeof window !== 'undefined' && window.showdown && window.showdown.extensions) {
+    window.showdown.extensions.twitter = twitter;
   }
   if (typeof module !== 'undefined') {
     module.exports = twitter;
