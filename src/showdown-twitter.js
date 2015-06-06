@@ -48,8 +48,8 @@
   };
 
   // Client-side export
-  if (typeof window !== 'undefined' && window.Showdown && window.Showdown.extensions) {
-    window.Showdown.extensions.twitter = twitter;
+  if (typeof window !== 'undefined' && window.showdown && window.showdown.extensions) {
+    window.showdown.extensions.twitter = twitter;
   }
   // Server-side export
   if (typeof module !== 'undefined') {
