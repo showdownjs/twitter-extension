@@ -2,17 +2,17 @@
   'use strict';
 
   require('chai').should();
+  var showdown = require('showdown');
+  require('../src/showdown-twitter.js');
 
   var fs = require('fs'),
-      extension = require('../src/showdown-twitter.js'),
-      showdown = require('showdown'),
-      converter = new showdown.Converter({extensions: [extension]}),
-      cases = fs.readdirSync('test/cases/')
-        .filter(filter())
-        .map(map('test/cases/')),
-      issues = fs.readdirSync('test/issues/')
-        .filter(filter())
-        .map(map('test/issues/'));
+    converter = new showdown.Converter({extensions: ['twitter']}),
+    cases = fs.readdirSync('test/cases/')
+      .filter(filter())
+      .map(map('test/cases/')),
+    issues = fs.readdirSync('test/issues/')
+      .filter(filter())
+      .map(map('test/issues/'));
 
   // Register twitter extension
   //showdown.extensions.twitter = twitter;
@@ -75,12 +75,6 @@
 
     // Remove extra lines
     testCase.expected = testCase.expected.trim();
-
-    // Convert whitespace to a visible character so that it shows up on error reports
-    testCase.expected = testCase.expected.replace(/ /g, '·');
-    testCase.expected = testCase.expected.replace(/\n/g, '•\n');
-    testCase.actual = testCase.actual.replace(/ /g, '·');
-    testCase.actual = testCase.actual.replace(/\n/g, '•\n');
 
     return testCase;
 

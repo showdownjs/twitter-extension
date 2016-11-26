@@ -1,9 +1,20 @@
-/*! showdown-twitter 06-06-2015 */
-
-(function () {
+/*! showdown-twitter 26-11-2016 */(function (extension) {
   'use strict';
 
-  var twitter = function () {
+  if (typeof showdown !== 'undefined') {
+    extension(showdown);
+  } else if (typeof define === 'function' && define.amd) {
+    define(['showdown'], extension);
+  } else if (typeof exports === 'object') {
+    module.exports = extension(require('showdown'));
+  } else {
+    throw Error('Could not find showdown library');
+  }
+
+}(function (showdown) {
+  'use strict';
+
+  showdown.extension('twitter', function () {
     return [
       {
         type:    'lang',
@@ -33,14 +44,7 @@
         replace: '@'
       }
     ];
-  };
-  if (typeof window !== 'undefined' && window.showdown && window.showdown.extensions) {
-    window.showdown.extensions.twitter = twitter;
-  }
-  if (typeof module !== 'undefined') {
-    module.exports = twitter;
-  }
-
-}());
+  });
+}));
 
 //# sourceMappingURL=showdown-twitter.js.map

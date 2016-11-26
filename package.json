@@ -1,6 +1,6 @@
 {
   "name": "showdown-twitter",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Twitter extension for showdown",
   "keywords": [
     "markdown",
@@ -8,7 +8,7 @@
     "showdown extension",
     "twitter"
   ],
-  "author": "Estev„o Soares dos Santos (https://github.com/tivie)",
+  "author": "Estev√£o Soares dos Santos (https://github.com/tivie)",
   "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
@@ -22,20 +22,19 @@
   "scripts": {
     "test": "grunt test"
   },
-  "dependencies": {
-    "showdown": "1.0.x"
-  },
   "devDependencies": {
-    "chai": "^2.3.0",
-    "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13",
-    "load-grunt-tasks": "^3.2.0",
-    "grunt-contrib-concat": "^0.5.0",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-uglify": "^0.6.0",
-    "grunt-conventional-changelog": "^1.1.0",
-    "grunt-jscs": "^1.2.0",
-    "grunt-simple-mocha": "^0.4.0",
-    "grunt-stripcomments": "^0.3.1"
+    "showdown": "1.5.0",
+    "chai": "^1.10.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-conventional-changelog": "^6.1",
+    "grunt-endline": "^0.6.1",
+    "grunt-jscs": "^2.1.0",
+    "grunt-simple-mocha": "^0.4.1",
+    "grunt-stripcomments": "^0.6.0",
+    "load-grunt-tasks": "^3.5.2"
   }
 }

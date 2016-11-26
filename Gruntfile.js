@@ -1,8 +1,13 @@
 module.exports = function (grunt) {
   'use strict';
 
+  if (grunt.option('q') || grunt.option('quiet')) {
+    require('quiet-grunt');
+  }
+
   var config = {
     pkg: grunt.file.readJSON('package.json'),
+
     concat: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
@@ -13,6 +18,7 @@ module.exports = function (grunt) {
         dest: 'dist/<%= pkg.name %>.js'
       }
     },
+
     comments: {
       js: {
         options: {
@@ -22,6 +28,7 @@ module.exports = function (grunt) {
         src: ['<%= concat.dist.dest %>']
       }
     },
+
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
@@ -33,22 +40,55 @@ module.exports = function (grunt) {
         }
       }
     },
+
     jshint: {
-      files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js']
+      options: {
+        jshintrc: '.jshintrc',
+        reporterOutput: ''
+      },
+      files: [
+        'Gruntfile.js',
+        'src/**/*.js',
+        'test/**/*.js'
+      ]
     },
+
     jscs: {
       options: {
-        config: '.jscs.json',
-        files: [
-          'Gruntfile.js',
-          'src/**/*.js',
-          'test/**/*.js'
-        ]
+        config: '.jscs.json'
+      },
+      files: [
+        'Gruntfile.js',
+        'src/**/*.js',
+        'test/**/*.js'
+      ]
+    },
+
+    conventionalChangelog: {
+      options: {
+        changelogOpts: {
+          preset: 'angular'
+        }
+      },
+      release: {
+        src: 'CHANGELOG.md'
       }
     },
-    changelog: {
-      options: {}
+
+    conventionalGithubReleaser: {
+      release: {
+        options: {
+          auth: {
+            type: 'oauth',
+            token: process.env.GH_TOEKN
+          },
+          changelogOpts: {
+            preset: 'angular'
+          }
+        }
+      }
     },
+
     //Server-side tests
     simplemocha: {
       test: {
@@ -70,6 +110,7 @@ module.exports = function (grunt) {
   grunt.registerTask('lint', ['jshint', 'jscs']);
   grunt.registerTask('test', ['lint', 'simplemocha']);
   grunt.registerTask('build', ['test', 'concat', 'comments', 'uglify']);
+  grunt.registerTask('prep-release', ['build', 'conventionalChangelog']);
 
-  grunt.registerTask('default', []);
+  grunt.registerTask('default', ['build']);
 };
