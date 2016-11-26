@@ -1,3 +1,13 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/showdownjs/twitter-extension/compare/1.0.1...v1.1.0) (2016-11-26)
+
+
+### Features
+
+* **uml:** update loading mechanism to UML ([f1065e4](https://github.com/showdownjs/twitter-extension/commit/f1065e4))
+
+
+
 <a name"1.0.1"></a>
 ### 1.0.1 (2015-06-06)
 
