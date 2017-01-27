@@ -30,7 +30,7 @@
       // @username syntax
       {
         type:    'lang',
-        regex:   '\\B(\\\\)?@([\\S]+)\\b',
+        regex:   /\B(\\)?@([\S]+)\b/,
         replace: function (match, leadingSlash, username) {
           // Check if we matched the leading \ and return nothing changed if so
           if (leadingSlash === '\\') {
